@@ -1,0 +1,43 @@
+﻿@model CUEL.Models.Message
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_STLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Message</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AppUser.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppUser.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Chat.ChatID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chat.ChatID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MessageBody)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MessageBody)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MessageID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

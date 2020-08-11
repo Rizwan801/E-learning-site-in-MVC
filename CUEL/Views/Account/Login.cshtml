@@ -1,0 +1,59 @@
+﻿@model CUEL.ViewModels.LoginVM
+@{
+    ViewBag.Title = "Log in";
+    Layout = "~/Views/Shared/_LayoutLogIn.cshtml";
+}
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+@*<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/bootstrap.js"></script>*@
+<link href="~/Content/LoginStyles.css" rel="stylesheet" />
+
+<section class="login-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 login-sec">
+                <h2 class="text-center clor">Login Now</h2>
+                @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+
+                        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", required = "" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        @*<label for="exampleInputPassword1">Password</label>*@
+                        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", required = "" })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+
+                    </div>
+                    <p style="text-align:center; color:red;">@ViewBag.Error</p>
+                    <div class="form-check">
+                        <div class="checkbox">
+                            @Html.CheckBoxFor(m => m.RememberMe)
+                            @Html.LabelFor(m => m.RememberMe)
+                        </div>
+                        <button type="submit" class="btn btn-login float-right">login</button>
+                    </div>
+                    <p><a href="/Account/AdminLogin" class="btn btn-primary">Admin Login</a></p>
+                    <p><a href="/Students/Create">Create Student Account</a></p>
+                    <p><a href="/Teachers/Create">Create Teacher Account</a></p>
+
+                }
+                <div class="copy-text">Created With <i class="fa fa-heart"></i> by <a href="#">Rizwan Ahmed</a></div>
+            </div>
+            <div class="col-md-8 banner-sec">
+
+            </div>
+        </div>
+    </div>
+</section>

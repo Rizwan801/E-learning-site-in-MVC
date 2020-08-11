@@ -1,0 +1,67 @@
+﻿@{
+    CUEL.Models.AppUser user = new CUEL.Models.AppUser();
+    if (Session["AppUser"] != null)
+    {
+        user = Session["AppUser"] as CUEL.Models.AppUser;
+    }
+    else
+    {
+        Response.Redirect(Url.Action("Login", "Account"));
+    }
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - CU Elearning</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        .navbar-my {
+            border-radius: 0 0 50px 50px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar bg-success navbar-my navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("CU ELearning", "Index", "Posts", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Batches", "Index", "Batches")</li>
+                    <li>@Html.ActionLink("Departments", "Index", "Departments")</li>
+                    <li>@Html.ActionLink("DiscussionForms", "Index", "DiscussionForms")</li>
+                    <li>@Html.ActionLink("Admins", "Index", "Admins")</li>
+                    <li>@Html.ActionLink("Students", "Index", "Students")</li>
+                    <li>@Html.ActionLink("Teachers", "Index", "Teachers")</li>
+                    <li>@Html.ActionLink("Account Requests", "AccountRequests", "Home")</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - CU ELearning</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

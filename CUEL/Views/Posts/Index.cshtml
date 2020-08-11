@@ -1,0 +1,180 @@
+﻿@model IEnumerable<CUEL.Models.Post>
+@using CUEL.Models;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_STLayout.cshtml";
+    AppUser user = Session["AppUser"] as AppUser;
+}
+<link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+<div class="row">
+
+    <div class="col-md-8">
+        <div class="row label-primary" style="border-radius: 0 0 50px 0;margin-bottom:10px;">
+            <div class="" style="margin:15px;">
+                <input type="text" style="width:100%;padding: 5px;padding-left: 10px;    border-radius: 10px 10px 100px 10px;font-size: 25px;" placeholder="Search Posts" id="searchInput" onkeyup="searchFunction()" />
+            </div>
+        </div>
+        @if (user.UserType != UserType.Admin)
+        {
+            <div>
+                @using (Html.BeginForm("Create", "Posts", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="create-post">
+                        <div class="row">
+                            <div class="col-md-8 col-sm-8">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-2 col-sm-2">
+                                            <img src="@Url.Action("GetPicture","Account",new { id = (Session["AppUser"] as CUEL.Models.AppUser).AppUserID })" alt="" class="profile-photo-md" />
+                                        </div>
+                                        <div class="col-md-10 col-sm-8">
+                                            <input type="text" class="form-control" placeholder="Enter Title here..." id="Title" name="Title" required />
+                                            <textarea name="Description" id="Description" cols="40" rows="3" class="form-control" placeholder="Write Your Post..." required></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <div class="tools">
+                                    @*<br /><br /><br />*@
+                                    <ul class="publishing-tools list-inline">
+                                        <li style="display:none"><input type="file" name="Image" id="Image" /></li>
+                                        <li><a href="#" onclick="document.getElementById('Image').click()"><i class="glyphicon glyphicon-picture"></i></a></li>
+                                        <li><a href="#" onclick="document.getElementById('Image').click()"><i class="glyphicon glyphicon-facetime-video"></i></a></li>
+                                        <li><a href="#" onclick="document.getElementById('Image').click()"><i class="glyphicon glyphicon-edit"></i></a></li>
+                                    </ul>
+                                    <input type="submit" value="Publish" class="btn btn-primary pull-right">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        <!-- Post Content================================================= -->
+        <div id="cuel-posts" style="">
+            @foreach (var post in Model)
+            {
+                <div class="post-info">
+                    <a href="/Posts/Details?id=@post.PostID">
+                        <div class="post-content">
+                            <h4 style="padding-left:15px;margin:10px;" class="post-title">
+                                <span>@post.Title</span>
+                                @if (user.UserType == UserType.Admin)
+                                {
+                                    <a href="~/Posts/Delete?id=@post.PostID" class="btn btn-danger pull-right">Delete</a>
+                                }
+                            </h4>
+                            <div class="post-container">
+                                <img src="@Url.Action("GetPicture","Account",new { id = post.AppUserID })" alt="user" class="profile-photo-md pull-left" />
+                                <div class="post-detail">
+                                    <div class="user-info">
+                                        <h5><a href="~/Posts/UserProfile?id=@post.AppUser.AppUserID" class="profile-link">@post.AppUser.FullName</a> <span class="following">following</span></h5>
+                                        <p class="text-muted">@post.Added.ToLongDateString() | @post.Added.ToLongTimeString()</p>
+                                    </div>
+                                    <div class="reaction">
+                                        <a class="btn text-green"><i class="fa fa-thumbs-up"></i> 23</a>
+                                        <a class="btn text-red"><i class="fa fa-thumbs-down"></i> 4</a>
+                                    </div>
+                                    <div class="line-divider"></div>
+                                    <div class="post-text">
+                                        <p><i class="em em-thumbsup"></i> <i class="em em-thumbsup"></i> @post.Description </p>
+                                        @if (post.FileType == "video/mp4")
+                                        {
+                                            <video src="@Url.Action("GetFile","Posts",new { id = post.PostID })" controls height="300px" width="100%"></video>
+                                        }
+                                        else if (post.FileType != null)
+                                        {
+                                            <embed src="@Url.Action("GetFile","Posts",new { id = post.PostID })" type="@post.FileType" width="100%" height="300px" />
+                                        }
+                                    </div>
+                                    <div class="line-divider"></div>
+                                    @foreach (var cmnt in post.PostComments)
+                                    {
+                                        <div class="post-comment">
+                                            <img src="@Url.Action("GetPicture","Account",new { id = cmnt.AppUserID })" alt="" class="profile-photo-sm" />
+                                            <p><a href="" class="profile-link">@cmnt.AppUser.FullName</a> @cmnt.CommentBody <i class="em em-muscle"></i></p>
+                                        </div>
+                                    }
+
+                                    @using (Html.BeginForm("Create", "PostComments", new { PostID = post.PostID, ru = Request.Url.PathAndQuery }, FormMethod.Post, new { enctype = "multipart/form-data" }))
+                                    {
+                                        @Html.AntiForgeryToken()
+                                        <div class="post-comment">
+                                            <img src="@Url.Action("GetPicture","Account",new { id = (Session["AppUser"] as CUEL.Models.AppUser).AppUserID })" alt="" class="profile-photo-sm" />
+                                            <input style="margin: 0px;height: 44px;border-radius: 50px 0px 0px 50px;" type="text" class="form-control" id="CommentBody" name="CommentBody" placeholder="Post a comment" required />
+                                            <input style="border-radius: 0px 50px 50px 0px;" type="submit" value="Send" />
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        <!-- Post Content================================================= -->
+        @*<div class="post-content">
+                <h4 style="padding-left:15px;">Title</h4>
+                <div class="post-container">
+                    <img src="~/Content/images/user.jpg" alt="user" class="profile-photo-md pull-left" />
+                    <div class="post-detail">
+                        <div class="user-info">
+                            <h5><a href="timeline.html" class="profile-link">Linda Lohan</a> <span class="following">following</span></h5>
+                            <p class="text-muted">Published a photo about 1 hour ago</p>
+                        </div>
+                        <div class="reaction">
+                            <a class="btn text-green"><i class="icon ion-thumbsup"></i> 23</a>
+                            <a class="btn text-red"><i class="fa fa-thumbs-down"></i> 4</a>
+                        </div>
+                        <div class="line-divider"></div>
+                        <div class="post-text">
+                            <p><i class="em em-thumbsup"></i> <i class="em em-thumbsup"></i> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                        </div>
+                        <div class="line-divider"></div>
+                        <div class="post-comment">
+                            <img src="~/Content/images/user2.jpg" alt="" class="profile-photo-sm" />
+                            <p><a href="timeline.html" class="profile-link">Cris </a> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam <i class="em em-muscle"></i></p>
+                        </div>
+                        <div class="post-comment">
+                            <img src="~/Content/images/user.jpg" alt="" class="profile-photo-sm" />
+                            <input type="text" class="form-control" placeholder="Post a comment">
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+
+    </div>
+    <div class="col-md-4"></div>
+</div>
+<script>
+    function searchFunction() {
+        var input, filter, table, single, title, i;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        posts = document.getElementById("cuel-posts");
+        single = posts.getElementsByClassName("post-info");
+        for (i = 0; i < single.length; i++) {
+            var found = false;
+            title = single[i].getElementsByClassName("post-title")[0];
+            if (title.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                single[i].style.display = "";
+                found = true;
+            }
+            if (!found) {
+                single[i].style.display = "none";
+            }
+        }
+    }
+</script>
+<script>
+                            //var videos = document.getElementsByTagName("video");
+
+                            //for (var i in videos) {
+                            //    videos[i].removeAttr("autoplay");
+                            //}
+                            //$(document).ready(function () {
+                            //    $("video").removeAttr("autoplay");
+                            //});
+</script>

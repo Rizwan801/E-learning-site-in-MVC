@@ -1,0 +1,51 @@
+﻿@model CUEL.Models.FormPostComment
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_STLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FormPostComment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AppUser.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppUser.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CommentBody)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommentBody)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FormPostCommentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

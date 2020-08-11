@@ -1,0 +1,57 @@
+﻿@model CUEL.Models.FormPostComment
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_STLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>FormPostComment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AppUser.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppUser.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CommentBody)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommentBody)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

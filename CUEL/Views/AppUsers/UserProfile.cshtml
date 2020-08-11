@@ -1,0 +1,54 @@
+﻿@model CUEL.Models.AppUser
+
+@{
+    ViewBag.Title = "User Profile";
+    Layout = "~/Views/Shared/_STLayout.cshtml";
+}
+
+@using (Html.BeginForm("UserProfile", "AppUsers", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Update Your Password or Profile Picture</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.AppUserID)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", required = "required", value = Model.Password } })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Picture,"Display Picture", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                <input name="Image1" id="Image1" type="file" onchange="previewFile1()" /> <br />
+                <img src="@Url.Action("GetPicture","Account",new { id = Model.AppUserID })" alt="Profile Picture" height="200" id="Image1Preview" />
+                @Html.ValidationMessageFor(model => model.Picture, "", new { @class = "text-danger" })
+            </div>
+            <script>
+                function previewFile1() {
+                    var preview = document.querySelector('#Image1Preview');
+                    var file = document.querySelector('#Image1').files[0];
+                    var reader = new FileReader();
+
+                    reader.addEventListener("load", function () {
+                        preview.src = reader.result;
+                    }, false);
+
+                    if (file) {
+                        reader.readAsDataURL(file);
+                    }
+                }
+            </script>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-6">
+                <input type="submit" value="Update" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}

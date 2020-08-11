@@ -1,0 +1,245 @@
+﻿@{
+    CUEL.Models.AppUser user = new CUEL.Models.AppUser();
+    if (Session["AppUser"] != null)
+    {
+        user = Session["AppUser"] as CUEL.Models.AppUser;
+    }
+    else
+    {
+        Response.Redirect(Url.Action("Login", "Account"));
+    }
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>CU ELearning</title>
+    <link href="~/Content/StyleSheet2user.css" rel="stylesheet" />
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/theme/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- MetisMenu CSS -->
+    <link href="~/Content/theme/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="~/Content/theme/dist/css/sb-admin-2.css" rel="stylesheet">
+    <!-- Morris Charts CSS -->
+    <link href="~/Content/theme/vendor/morrisjs/morris.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="~/Content/theme/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="@Url.Action("Index", "Home")">CU ELearning Portal</a>
+            </div>
+            <!-- /.navbar-header -->
+            <ul class="nav navbar-top-links navbar-right">
+                @*
+                        <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-messages">
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <strong>Awais alid</strong>
+                                        <span class="pull-right text-muted">
+                                            <em>Yesterday</em>
+                                        </span>
+                                    </div>
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <strong>John Smith</strong>
+                                        <span class="pull-right text-muted">
+                                            <em>Yesterday</em>
+                                        </span>
+                                    </div>
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <strong>John Smith</strong>
+                                        <span class="pull-right text-muted">
+                                            <em>Yesterday</em>
+                                        </span>
+                                    </div>
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a class="text-center" href="#">
+                                    <strong>Read All Messages</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </li>
+                *@
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        @Html.Action("Latest", "Notifications")
+                        <li>
+                            <a class="text-center" href="@Url.Action("Index", "Notifications")">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li>
+                            <a href="~/Posts/UserProfile"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li>
+                            <a href="~/AppUsers/UserProfile?id=@user.AppUserID"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+
+                    <div class="nav" id="side-menu">
+                        <!-- SIDEBAR USERPIC -->
+                        <div class="profile-userpic">
+                            <a href="~/AppUsers/UserProfile?id=@user.AppUserID">
+                                <img src="@Url.Action("GetPicture","Account",new { id = user.AppUserID })" class="img-responsive" alt="img not found">
+                            </a>
+                        </div>
+                        <!-- END SIDEBAR USERPIC -->
+                        <!-- SIDEBAR USER TITLE -->
+                        <div class="profile-usertitle">
+                            <a href="~/Posts/UserProfile" style="text-decoration:none;">
+                                <div class="profile-usertitle-name">
+                                    @user.FullName
+                                </div>
+                                @if (user.UserType != CUEL.Models.UserType.Admin)
+                                {
+                                    <div class="profile-usertitle-job" style="margin-bottom:0">
+                                        @user.Department.DepartmentName
+                                    </div>
+                                }
+
+                                @if (user.UserType == CUEL.Models.UserType.Student)
+                                {
+                                    <div class="profile-usertitle-job">
+                                        @user.Batch.BatchNo
+                                    </div>
+                                }
+                            </a>
+                        </div>
+
+                    </div>
+                    <ul class="nav" id="side-menu">
+                        @*<li class="sidebar-search">
+                                <div class="input-group custom-search-form">
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </span>
+                                </div>
+
+                            </li>*@
+                        <li>
+                            <a href="@Url.Action("Index", "Posts")"><i class="fa fa-home fa-fw"></i> Home Page</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index", "Messages")"><i class="fa fa-envelope "></i> Messages </a>
+                        </li>
+                        @if (user.UserType != CUEL.Models.UserType.Admin)
+                        {
+                            <li>
+                                <a href="@Url.Action("Index", "Notifications")"><i class="fa fa-bell fa-fw"></i> Notifications </a>
+                            </li>
+                        }
+                        <li>
+                            <a href="@Url.Action("Forms", "DiscussionForms")"><i class="fa fa-edit fa-fw"></i> Discussions </a>
+                        </li>
+                        @*<li>
+                                <a href="#"><i class="fa fa-newspaper-o fa-fw"></i> Notice Board </a>
+                            </li>*@
+                        <li>
+                            <a href="~/AppUsers/UserProfile?id=@user.AppUserID"><i class="fa fa-wrench fa-fw"></i> Setting </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+        <div id="page-wrapper">
+            <div class="row">
+                @RenderBody()
+
+            </div>
+
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+    <script src="~/Content/theme/vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Content/theme/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="~/Content/theme/vendor/metisMenu/metisMenu.min.js"></script>
+    <!-- Morris Charts JavaScript -->
+    <script src="~/Content/theme/vendor/raphael/raphael.min.js"></script>
+    <script src="~/Content/theme/vendor/morrisjs/morris.min.js"></script>
+    <script src="~/Content/theme/data/morris-data.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="~/Content/theme/dist/js/sb-admin-2.js"></script>
+    <script type="text/javascript" src="~/Scripts/knockout-3.4.2.js"></script>
+    <script type="text/javascript" src="~/AjaxHandlers/JavaScript.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+</body>
+</html>
+

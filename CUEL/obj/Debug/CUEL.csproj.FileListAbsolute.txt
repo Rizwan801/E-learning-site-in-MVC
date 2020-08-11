@@ -1,0 +1,240 @@
+c:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+c:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\VBCSCompiler.exe
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.ValueTuple.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\ApplicationInsights.config
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\CUEL.dll.config
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\CUEL.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\CUEL.pdb
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\csc.exe
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\csc.exe.config
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\csc.rsp
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\csi.exe
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\csi.exe.config
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\csi.rsp
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.AppContext.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.Console.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.IO.Compression.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.Security.Claims.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.Threading.Thread.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\vbc.exe
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\vbc.exe.config
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\vbc.rsp
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\Antlr3.Runtime.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\EntityFramework.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\EntityFramework.SqlServer.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\EntityFramework.SqlServerCompact.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\Microsoft.AI.Web.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\Newtonsoft.Json.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Data.SqlServerCe.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Net.Http.Formatting.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Web.Helpers.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Web.Http.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Web.Http.WebHost.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Web.Mvc.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Web.Optimization.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Web.Razor.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Web.WebPages.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Web.WebPages.Razor.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\WebGrease.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\EntityFramework.xml
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\EntityFramework.SqlServer.xml
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\EntityFramework.SqlServerCompact.xml
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Net.Http.Formatting.xml
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Web.Http.xml
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Web.Http.WebHost.xml
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Web.Helpers.xml
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Web.Mvc.xml
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Web.Optimization.xml
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Web.Razor.xml
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Web.WebPages.xml
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Web.WebPages.Razor.xml
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\Newtonsoft.Json.xml
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\Antlr3.Runtime.pdb
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\Microsoft.AI.Web.xml
+C:\Users\Asim\Source\Repos\CUEL\CUEL\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Asim\Source\Repos\CUEL\CUEL\obj\Debug\CUEL.csprojAssemblyReference.cache
+C:\Users\Asim\Source\Repos\CUEL\CUEL\obj\Debug\CUEL.Migrations.m1.resources
+C:\Users\Asim\Source\Repos\CUEL\CUEL\obj\Debug\CUEL.Migrations.m2.resources
+C:\Users\Asim\Source\Repos\CUEL\CUEL\obj\Debug\CUEL.Migrations.m3.resources
+C:\Users\Asim\Source\Repos\CUEL\CUEL\obj\Debug\CUEL.Migrations.m4.resources
+C:\Users\Asim\Source\Repos\CUEL\CUEL\obj\Debug\CUEL.Migrations.m5.resources
+C:\Users\Asim\Source\Repos\CUEL\CUEL\obj\Debug\CUEL.Migrations.m6.resources
+C:\Users\Asim\Source\Repos\CUEL\CUEL\obj\Debug\CUEL.Migrations.m7.resources
+C:\Users\Asim\Source\Repos\CUEL\CUEL\obj\Debug\CUEL.Migrations.m8.resources
+C:\Users\Asim\Source\Repos\CUEL\CUEL\obj\Debug\CUEL.Migrations.m9.resources
+C:\Users\Asim\Source\Repos\CUEL\CUEL\obj\Debug\CUEL.Migrations.m10.resources
+C:\Users\Asim\Source\Repos\CUEL\CUEL\obj\Debug\CUEL.Migrations.m11.resources
+C:\Users\Asim\Source\Repos\CUEL\CUEL\obj\Debug\CUEL.Migrations.m12.resources
+C:\Users\Asim\Source\Repos\CUEL\CUEL\obj\Debug\CUEL.Migrations.m13.resources
+C:\Users\Asim\Source\Repos\CUEL\CUEL\obj\Debug\CUEL.csproj.GenerateResource.cache
+C:\Users\Asim\Source\Repos\CUEL\CUEL\obj\Debug\CUEL.csproj.CoreCompileInputs.cache
+C:\Users\Asim\Source\Repos\CUEL\CUEL\obj\Debug\CUEL.csproj.CopyComplete
+C:\Users\Asim\Source\Repos\CUEL\CUEL\obj\Debug\CUEL.dll
+C:\Users\Asim\Source\Repos\CUEL\CUEL\obj\Debug\CUEL.pdb
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\ApplicationInsights.config
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\CUEL.dll.config
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\CUEL.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\CUEL.pdb
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\csc.exe
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\csc.exe.config
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\csc.rsp
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\csi.exe
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\csi.exe.config
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\csi.rsp
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\Microsoft.Win32.Primitives.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.AppContext.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.Collections.Immutable.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.Console.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.Diagnostics.Process.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.IO.Compression.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.IO.FileSystem.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.IO.Pipes.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.Reflection.Metadata.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.Security.AccessControl.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.Security.Claims.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.Security.Principal.Windows.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.Threading.Thread.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.ValueTuple.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.Xml.XmlDocument.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.Xml.XPath.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\vbc.exe
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\vbc.exe.config
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\vbc.rsp
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\VBCSCompiler.exe
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\roslyn\VBCSCompiler.exe.config
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\Antlr3.Runtime.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\EntityFramework.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\EntityFramework.SqlServer.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\EntityFramework.SqlServerCompact.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\Microsoft.AI.Agent.Intercept.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\Microsoft.AI.DependencyCollector.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\Microsoft.AI.Web.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\Microsoft.AI.WindowsServer.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\Microsoft.ApplicationInsights.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\Microsoft.Web.Infrastructure.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\Newtonsoft.Json.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Data.SqlServerCe.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Diagnostics.DiagnosticSource.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Net.Http.Formatting.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Web.Helpers.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Web.Http.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Web.Http.WebHost.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Web.Mvc.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Web.Optimization.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Web.Razor.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Web.WebPages.Deployment.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Web.WebPages.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Web.WebPages.Razor.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\WebGrease.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\EntityFramework.xml
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\EntityFramework.SqlServer.xml
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\EntityFramework.SqlServerCompact.xml
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Net.Http.Formatting.xml
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Web.Http.xml
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Web.Http.WebHost.xml
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Web.Helpers.xml
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Web.Mvc.xml
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Web.Optimization.xml
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Web.Razor.xml
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Web.WebPages.xml
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Web.WebPages.Deployment.xml
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Web.WebPages.Razor.xml
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\Newtonsoft.Json.xml
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\Antlr3.Runtime.pdb
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\System.Diagnostics.DiagnosticSource.xml
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\Microsoft.AI.DependencyCollector.xml
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\Microsoft.AI.WindowsServer.xml
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\Microsoft.AI.Web.xml
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\obj\Debug\CUEL.csprojAssemblyReference.cache
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\obj\Debug\CUEL.Migrations.m1.resources
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\obj\Debug\CUEL.Migrations.m2.resources
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\obj\Debug\CUEL.Migrations.m3.resources
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\obj\Debug\CUEL.Migrations.m4.resources
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\obj\Debug\CUEL.Migrations.m5.resources
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\obj\Debug\CUEL.Migrations.m6.resources
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\obj\Debug\CUEL.Migrations.m7.resources
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\obj\Debug\CUEL.Migrations.m8.resources
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\obj\Debug\CUEL.Migrations.m9.resources
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\obj\Debug\CUEL.Migrations.m10.resources
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\obj\Debug\CUEL.Migrations.m11.resources
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\obj\Debug\CUEL.Migrations.m12.resources
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\obj\Debug\CUEL.Migrations.m13.resources
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\obj\Debug\CUEL.csproj.GenerateResource.cache
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\obj\Debug\CUEL.csproj.CoreCompileInputs.cache
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\obj\Debug\CUEL.csproj.CopyComplete
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\obj\Debug\CUEL.dll
+F:\Developer Mode\professional Module\E learning\CUEL\CUEL\obj\Debug\CUEL.pdb

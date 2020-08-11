@@ -1,0 +1,35 @@
+﻿@model CUEL.Models.Chat
+
+@{
+    ViewBag.Title = "ComposeMessage";
+    Layout = "~/Views/Shared/_STLayout.cshtml";
+}
+
+<h2>Compose New Message</h2>
+
+@using (Html.BeginForm()) 
+{    
+    <div class="form-horizontal">
+        <h4>Chat</h4>
+        <hr />
+        <div class="form-group">
+            <label class="control-label col-md-2">User Name</label>
+            <div class="col-md-5">
+                <input type="text" name="email" id="email" value="" placeholder="Email or User Name" class="form-control" required="" />
+                <p class="text-danger">@ViewBag.Error</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Message</label>
+            <div class="col-md-5">
+                <input type="text" name="msg" id="msg" value="" placeholder="Message" class="form-control" required="" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Send" class="btn btn-success" />
+                <a href="~/Messages/Index" class="btn btn-danger">Cencel</a>
+            </div>
+        </div>
+    </div>
+}

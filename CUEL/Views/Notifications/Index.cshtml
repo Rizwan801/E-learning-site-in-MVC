@@ -1,0 +1,66 @@
+﻿@model IEnumerable<CUEL.Models.Notification>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_STLayout.cshtml";
+}
+<link href="~/Content/Notificationstyles.css" rel="stylesheet" />
+<h2>Notifications</h2>
+<hr /><br />
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            @foreach (var noti in Model)
+            {
+                <a href="@noti.Link">
+                    <div class="row notice notice-info hw">
+
+                        <div class="col-md-1">
+                            <img src="@Url.Action("GetPicture","Account",new { id = noti.DriverID })" class="media-object cat-icon rounded" alt="...">
+                        </div>
+                        <div class="col-md-11">
+                            @*<strong>Notice</strong>*@
+                            @noti.Text
+                        </div>
+
+                    </div>
+                </a>
+            }
+
+            @*<a href="#">
+            <div class="row notice notice-success hw">
+
+                <div class="col-md-1">
+                    <img src="~/Content/images/user.jpg" class="media-object cat-icon rounded" alt="...">
+                </div>
+                <div class="col-md-11">
+                    <strong>Notice</strong>
+                    Like your Post
+                </div>
+
+            </div>
+        </a>
+        <a href="#">
+            <div class="row notice notice-danger hw">
+                <div class="col-md-1">
+                    <img src="~/Content/images/user.jpg" class="media-object cat-icon rounded" alt="...">
+                </div>
+                <div class="col-md-11">
+                    <strong>Notice</strong>
+                    Dislike Your Post
+                </div>
+
+
+
+            </div>
+        </a>*@
+        </div>
+
+
+
+        <div class="col-md-4">
+
+        </div>
+    </div>
+</div>

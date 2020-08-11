@@ -1,0 +1,189 @@
+﻿@model IEnumerable<CUEL.Models.Chat>
+
+@{
+    ViewBag.Title = "Messages";
+    Layout = "~/Views/Shared/_STLayout.cshtml";
+    var user = Session["AppUser"] as CUEL.Models.AppUser;
+    var flag = true;
+}
+<link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+<!-- Chat Room
+       ================================================= -->
+<div class="row">
+    <div class="col-md-8">
+        <h2>Message Box</h2>
+        <a href="~/Messages/ComposeMessage">Compose Message</a>
+        <hr />
+        <div class="chat-room">
+            <div class="row">
+                <div class="col-md-5">
+
+                    <!-- Contact List in Left-->
+                    <ul class="nav nav-tabs contact-list scrollbar-wrapper scrollbar-outer">
+                        @foreach (var chat in Model)
+                        {
+                            <li class="active">
+                                <a href="#chat-@chat.ChatID" onclick="showMyMessages('#chat-@chat.ChatID')" data-toggle="tab">
+                                    <div class="contact">
+                                        <img src="@Url.Action("GetPicture","Account",new { id = chat.AppUser1ID == user.AppUserID?chat.AppUser2ID:chat.AppUser1ID })" alt="Picture" class="profile-photo-sm pull-left" />
+                                        <div class="msg-preview">
+                                            @if (chat.AppUser1ID == user.AppUserID)
+                                            {
+
+                                                <h6>@chat.AppUser2.FullName</h6>
+                                            }
+                                            else
+                                            {
+                                                <h6>@chat.AppUser1.FullName</h6>
+                                            }
+                                            <p class="text-muted">@chat.Messages.Last().MessageBody</p>
+
+                                            <small style="top:32px;" class="text-muted">@chat.Messages.Last().DateTime</small>
+                                            @*    <div style="bottom:10px;" class="chat-alert">1</div>*@
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        }
+
+                    </ul><!--Contact List in Left End-->
+
+                </div>
+                <div class="col-md-7">
+
+                    <!--Chat Messages in Right-->
+                    <div class="tab-content scrollbar-wrapper wrapper scrollbar-outer" id="messages">
+                        @foreach (var chat in Model)
+                        {
+                            if (flag)
+                            {
+                                <div class="tab-pane active" id="chat-@chat.ChatID">
+                                    <div class="chat-body">
+                                        <ul class="chat-message">
+                                            @foreach (var msg in chat.Messages)
+                                            {
+                                                if (msg.AppUserID == user.AppUserID)
+                                                {
+                                                    <li class="right">
+                                                        <img src="@Url.Action("GetPicture", "Account", new { id = msg.AppUserID })" alt="Picture" class="profile-photo-sm pull-right" />
+                                                        <div class="chat-item">
+                                                            <div class="chat-item-header">
+                                                                <h5>@msg.AppUser.FullName</h5>
+                                                                <small class="text-muted">@msg.DateTime</small>
+                                                            </div>
+                                                            <p>@msg.MessageBody</p>
+                                                        </div>
+                                                    </li>
+                                                }
+                                                else
+                                                {
+                                                    <li class="left">
+                                                        <img src="@Url.Action("GetPicture", "Account", new { id = msg.AppUserID })" alt="Picture" class="profile-photo-sm pull-left" />
+                                                        <div class="chat-item">
+                                                            <div class="chat-item-header">
+                                                                <h5>@msg.AppUser.FullName</h5>
+                                                                <small class="text-muted">@msg.DateTime</small>
+                                                            </div>
+                                                            <p>@msg.MessageBody</p>
+                                                        </div>
+                                                    </li>
+                                                }
+                                            }
+                                        </ul>
+                                    </div>
+                                    @using (Html.BeginForm("SendMessage", "Messages", new { cid = chat.ChatID }, FormMethod.Post))
+                                    {
+                                        <div class="send-message">
+                                            <div class="input-group">
+                                                <input type="text" name="msg" id="msg" required="" class="form-control" placeholder="Type your message">
+                                                <span class="input-group-btn">
+                                                    <input type="submit" value="Send" class="btn btn-default" />
+                                                </span>
+                                            </div>
+                                        </div>
+                                    }
+                                    @{
+                                        flag = false;
+                                    }
+
+                                </div>
+
+                            }
+                            else
+                            {
+                                <div class="tab-pane" id="chat-@chat.ChatID">
+                                    <div class="chat-body">
+                                        <ul class="chat-message">
+                                            @foreach (var msg in chat.Messages)
+                                            {
+                                                if (msg.AppUserID == user.AppUserID)
+                                                {
+                                                    <li class="right">
+                                                        <img src="@Url.Action("GetPicture", "Account", new { id = msg.AppUserID })" alt="Picture" class="profile-photo-sm pull-right" />
+                                                        <div class="chat-item">
+                                                            <div class="chat-item-header">
+                                                                <h5>@msg.AppUser.FullName</h5>
+                                                                <small class="text-muted">@msg.DateTime</small>
+                                                            </div>
+                                                            <p>@msg.MessageBody</p>
+                                                        </div>
+                                                    </li>
+                                                }
+                                                else
+                                                {
+                                                    <li class="left">
+                                                        <img src="@Url.Action("GetPicture", "Account", new { id = msg.AppUserID })" alt="Picture" class="profile-photo-sm pull-left" />
+                                                        <div class="chat-item">
+                                                            <div class="chat-item-header">
+                                                                <h5>@msg.AppUser.FullName</h5>
+                                                                <small class="text-muted">@msg.DateTime</small>
+                                                            </div>
+                                                            <p>@msg.MessageBody</p>
+                                                        </div>
+                                                    </li>
+                                                }
+                                            }
+                                        </ul>
+                                    </div>
+                                    @using (Html.BeginForm("SendMessage", "Messages", new { cid = chat.ChatID }, FormMethod.Post))
+                                    {
+                                        <div class="send-message">
+                                            <div class="input-group">
+                                                <input type="text" name="msg" id="msg" required="" class="form-control" placeholder="Type your message">
+                                                <span class="input-group-btn">
+                                                    <input type="submit" value="Send" class="btn btn-default" />
+                                                </span>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+
+
+                            }
+
+
+                        }
+
+                    </div><!--Chat Messages in Right End-->
+                    @*<div class="send-message">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Type your message">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">Send</button>
+                                </span>
+                            </div>
+                        </div>*@
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+<script>
+    $("#messages").animate({ scrollTop: 20000000 }, "slow");
+    function showMyMessages(id) {
+        $('.tab-pane').removeClass('active');
+        $(id).addClass('active');
+    }
+</script>

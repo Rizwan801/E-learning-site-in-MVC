@@ -1,0 +1,111 @@
+﻿@model CUEL.Controllers.FormsVM
+
+@{
+    ViewBag.Title = "Forms";
+    Layout = "~/Views/Shared/_STLayout.cshtml";
+}
+
+<h2>Discussion Forms</h2>
+@if ((Session["AppUser"] as CUEL.Models.AppUser).UserType != CUEL.Models.UserType.Admin)
+{
+    <table class="table">
+        <tr class="row">
+            <th class="col-xs-8 label-success">
+                Subscribed
+            </th>
+            <th class="col-xs-8 label-info"></th>
+        </tr>
+
+        @foreach (var item in Model.SubscribedFroms)
+        {
+            <tr class="row">
+                <td class="col-xs-8">
+                    <a href="/DiscussionForms/Discussions?id=@item.DiscussionFormID">
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </a>
+                </td>
+                <td class="col-xs-4">
+                    @Html.ActionLink("Un Subscribe", "UnSubscribe", new { id = item.DiscussionFormID }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+
+    </table>
+    <table class="table" id="searchTable">
+        <tr class="row">
+            <th class="col-xs-8 label-danger">
+                Un Subscribed
+            </th>
+            <th class="col-xs-4 label-info">
+                <input type="text" style="width:100%" placeholder="Search" id="searchInput" onkeyup="searchFunction()" />
+            </th>
+        </tr>
+
+        @foreach (var item in Model.UnSubscribedFroms)
+        {
+            <tr class="row">
+                <td class="col-xs-8">
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td class="col-xs-4">
+                    @Html.ActionLink("Subscribe", "Subscribe", new { id = item.DiscussionFormID }, new { @class = "btn btn-success" })
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+else
+{
+    <table class="table" id="searchTable">
+        <tr class="row">
+            <th class="col-xs-8 label-primary">
+                All Forms
+            </th>
+            <th class="col-xs-4 label-info">
+                <input type="text" style="width:100%" placeholder="Search" id="searchInput" onkeyup="searchFunction()" />
+            </th>
+        </tr>
+
+        @foreach (var item in Model.UnSubscribedFroms)
+        {
+            <tr class="row">
+                <td class="col-xs-8">
+                    <a href="/DiscussionForms/Discussions?id=@item.DiscussionFormID">
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </a>
+                </td>
+                <td class="col-xs-4">
+                    @Html.ActionLink("Admin View", "Discussions", "DiscussionForms", new { id = item.DiscussionFormID }, new { @class = "btn btn-info" })
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+
+
+
+
+<script>
+    function searchFunction() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("searchTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 1; i < tr.length; i++) {
+            var found = false;
+            for (var j = 0; j < 2; j++) {
+                td = tr[i].getElementsByTagName("td")[j];
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                    found = true;
+                }
+            }
+            if (!found) {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+</script>
